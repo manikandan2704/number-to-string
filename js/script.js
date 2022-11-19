@@ -1,9 +1,9 @@
-let num =121;
-switch(num){
-    case 0:{
-        console.log("zero")
-    }
-}
+// let num =121;
+// switch(num){
+//     case 0:{
+//         console.log("zero")
+//     }
+// }
 
 
 
@@ -58,34 +58,23 @@ switch(num){
     //         index = i;
     //     }
     // }
+
+
     // console.log(input);
 
 
    
 
+var num=12321;
+var sum=0;
+var c=num;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+while (num<0){
+    b=num%10;
+    sum=sum*10+b;
+    num=num+(num/10);
+}
+console.log(sum)
 
 
 
