@@ -6,7 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    button{
+        text-align: center;
+        background-color: aqua;
+    }
+</style>
 <body>
-    <script src="js/script.js"></script>
+<p>Ascending order</p>
+<p id="display"></p>
+<input id="inp" type="text"/>
+<input id="inp1" type="text"/>
+<input id="inp2" type="text"/>
+<button onclick="order()">click</button>
 </body>
+
+<script>
+
+const order=()=>{
+
+let overall="";
+let inp=parseInt(document.getElementByid("inp").value)
+let inp1=parseInt(document.getElementByid("inp1").value)
+let inp2=parseInt(document.getElementByid("inp2").value)
+let store=document.getElementById("display")
+
+
+
+if(inp>inp1&&inp>inp2){
+    if(inp1>inp2){
+        store.innerText=inp2+','+inp1+','+inp
+        console.log(inp2,inp1,inp)
+    }else{
+        store.innerText=inp1+','+inp2+','+inp
+        console.log(inp1,inp2,inp)
+    }
+}
+
+if(inp1>inp&&inp1>inp2){
+    if(inp>inp2){
+        store.innerText=inp2+','+inp+','+inp1
+        console.log(inp2,inp,inp1)
+    }else{
+        store.innerText=inp+','+inp2+','+inp1
+        console.log(inp,inp2,inp1)
+    }
+}
+
+
+
+if(inp2>inp&&inp2>inp1){
+    if(inp1>inp){
+        store.innerText=inp+','+inp1+','+inp2
+        console.log(inp,inp1,inp2)
+    }else{
+        store.innerText=inp1+','+inp+','+inp2
+        console.log(inp1,inp,inp2)
+    }
+}
+
+
+}
+
+
+
+
+// overall=parseInt(inp+inp1+inp2)
+// overall.sort((a,b)=>{
+//     return(
+//         a-b
+//     )
+// })
+// }
+
+
+
+</script>
 </html>
